@@ -24,7 +24,6 @@ def solve(E):
         G[u] = G.get(u, []) + [v]
         G[v] = G.get(v, []) + [u]
 
-
         if u not in ["start", "end"]:
             if u.islower(): lower.add(u)
             else: upper.add(u)

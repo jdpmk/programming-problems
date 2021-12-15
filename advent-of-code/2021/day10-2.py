@@ -40,13 +40,9 @@ def solve(chunks):
     for chunk in chunks:
         c, s = first_invalid_char(chunk)
         if not c:
-            complete = []
-            while s:
-                complete.append(complement[s.pop()])
-
             points = 0
-            for c in complete:
-                points = points * 5 + table[c]
+            while s:
+                points = points * 5 + table[complement[s.pop()]]
             all_points.append(points)
 
     return sorted(all_points)[len(all_points) // 2]
