@@ -84,7 +84,7 @@ def solve(xub, xlb, yub, ylb):
         for vy_0 in range(0, abs(yub)):
             max_height_in_curr_sim = 0
             for i in range(num_iterations):
-                x_i = x_0 + min(vx_0,i)*(vx_0 - sgn(vx_0)*min(vx_0,i) + (min(vx_0,i)+1)/2)
+                x_i = x_0 + min(vx_0, i) * (vx_0 - sgn(vx_0) * min(vx_0, i) + (min(vx_0, i) + 1) / 2)
                 y_i = y_0 + i * (vy_0 - i + (i + 1) / 2)
                 max_height_in_curr_sim = max(max_height_in_curr_sim, y_i)
                 if xub <= x_i <= xlb and yub <= y_i <= ylb:

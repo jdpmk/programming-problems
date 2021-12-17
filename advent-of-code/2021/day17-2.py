@@ -83,7 +83,7 @@ def solve(xub, xlb, yub, ylb):
     for vx_0 in range(0, xub * 2):
         for vy_0 in range(yub, abs(yub)):
             for i in range(num_iterations):
-                x_i = x_0 + min(vx_0,i)*(vx_0 - sgn(vx_0)*min(vx_0,i) + (min(vx_0,i)+1)/2)
+                x_i = x_0 + min(vx_0, i) * (vx_0 - sgn(vx_0) * min(vx_0, i) + (min(vx_0, i) + 1) / 2)
                 y_i = y_0 + i * (vy_0 - i + (i + 1) / 2)
                 if xub <= x_i <= xlb and yub <= y_i <= ylb:
                     num_good_initial_v += 1
