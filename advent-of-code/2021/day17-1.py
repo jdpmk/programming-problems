@@ -61,7 +61,7 @@ x_i = x_(i-1) + vx_(i-1)                                                        
       = ...
       = y_(i-k) + Σ_j∈[1..k] vy_0 - Σ_j∈[1..k] (i-j)         (apply k times)
 
-  base case: find k s.t.
+  base case: find k s.t. y_(i-k) -> y_0 --> k = i
   y_i = y_(i-k) + Σ_j∈[1..k] vy_0 - Σ_j∈[1..k] (i-j)
       = y_(i-i) + Σ_j∈[1..i] vy_0 - Σ_j∈[1..i] (i-j)
       = y_0     + i*vy_0          - (Σ_j∈[1..i] i - Σ_j∈[1..i] j)
