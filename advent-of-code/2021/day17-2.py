@@ -77,9 +77,8 @@ sgn = lambda x: 0 if x == 0 else abs(x) / x
 
 def solve(xub, xlb, yub, ylb):
     x_0, y_0 = 0, 0
-    num_iterations = 250
-
     num_good_initial_v = 0
+    num_iterations = 250
 
     for vx_0 in range(0, xub * 2):
         for vy_0 in range(yub, abs(yub)):
