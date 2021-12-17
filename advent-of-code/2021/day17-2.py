@@ -10,10 +10,10 @@ recurrences:
 ============
 [velocity]
   vx_i = vx_(i-1) - sgn(vx_(i-1))
-       = vx_(i-2) - sgn(vx_(i-2)) - sgn(vx_(i-1))
-       = vx_(i-3) - sgn(vx_(i-3)) - sgn(vx_(i-2)) - sgn(vx_(i-1))
+       = vx_(i-2) - sgn(vx_(i-2)) - sgn(vx_(i-1))                 (def. vx_i)
+       = vx_(i-3) - sgn(vx_(i-3)) - sgn(vx_(i-2)) - sgn(vx_(i-1)) (def. vx_i)
        = ...
-       = vx_(i-k) - Σ_j∈[1..k] sgn(vx_(i-k))
+       = vx_(i-k) - Σ_j∈[1..k] sgn(vx_(i-k))                      (apply k times; def. vx_i)
 
   base case: find k s.t. vx_(i-k) -> vx_0 --> k = i
   vx_i = vx_(i-i) - Σ_j∈[1..i] sgn(vx_(i-i))
