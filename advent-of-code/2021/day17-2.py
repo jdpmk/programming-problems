@@ -36,12 +36,12 @@ recurrences:
   --> vy_i = vy_0 - i
 
 [position]
-x_i = x_(i-1) + vx_(i-1)                                                                   (def. vx_i)
-    = x_(i-1) + vx_0 - (i-1)*sgn(vx_0)                                                     (def. x_i)
-    = x_(i-2) + vx_(i-2) + vx_0 - (i-1)*sgn(vx_0)                                          (def. vy_i)
-    = x_(i-2) + vx_0 - (i-2)*sgn(vx_0) + vx_0 - (i-1)*sgn(vx_0)                            (def. x_i)
-    = ...
-    = x_(i-k) + Σ_j∈[1..min(vx_0,k)] vx_0 - Σ_j∈[1..min(vx_0,k)] (min(vx_0,i)-j)*sgn(vx_0) (apply k times)
+  x_i = x_(i-1) + vx_(i-1)                                                                   (def. vx_i)
+      = x_(i-1) + vx_0 - (i-1)*sgn(vx_0)                                                     (def. x_i)
+      = x_(i-2) + vx_(i-2) + vx_0 - (i-1)*sgn(vx_0)                                          (def. vy_i)
+      = x_(i-2) + vx_0 - (i-2)*sgn(vx_0) + vx_0 - (i-1)*sgn(vx_0)                            (def. x_i)
+      = ...
+      = x_(i-k) + Σ_j∈[1..min(vx_0,k)] vx_0 - Σ_j∈[1..min(vx_0,k)] (min(vx_0,i)-j)*sgn(vx_0) (apply k times)
 
   base case: find k s.t. x_(i-k) -> x_0 --> k = i
   x_i = x_(i-k) + Σ_j∈[1..min(vx_0,k)] vx_0 - Σ_j∈[1..min(vx_0,k)] (min(vx_0,i)-j)*sgn(vx_0)
