@@ -5,7 +5,6 @@ pair_finder = re.compile(".*\[[0-9]+,[0-9]+\]")
 def explode(expr):
     o = 0
     s4 = None
-    e4 = None
     for i, c in enumerate(expr):
         if c == '[':
             o += 1
@@ -80,18 +79,16 @@ def split(expr):
 def simplify(expr):
     while True:
         exploded = explode(expr)
-
         if exploded != expr:
             expr = exploded
             continue
 
         splitted = split(exploded)
-
         if splitted != expr:
             expr = splitted
+            continue
 
-        else:
-            return expr
+        return expr
 
 def magnitude(expr):
     if isinstance(expr, int):
