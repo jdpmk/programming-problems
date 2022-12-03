@@ -31,7 +31,7 @@ int solve(const std::vector<std::string> &sacks) {
     int total = 0;
 
     for (size_t i = 0; i < sacks.size(); i += 3) {
-        int common = find_common(sacks[i], sacks[i + 1], sacks[i + 2]);
+        char common = find_common(sacks[i], sacks[i + 1], sacks[i + 2]);
 
         if (std::islower(common)) {
             total += static_cast<int>(common) - 96; 

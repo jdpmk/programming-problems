@@ -25,7 +25,7 @@ int solve(const std::vector<std::string> &sacks) {
     int total = 0;
 
     for (const auto &sack : sacks) {
-        int common = find_common(sack);
+        char common = find_common(sack);
 
         if (std::islower(common)) {
             total += static_cast<int>(common) - 96; 
