@@ -44,9 +44,9 @@ def solve(lines):
 
     unu_sz = TOTAL_SIZE - rec_sz.get(FS_ROOT)
 
-    for x in sorted(rec_sz.values()):
-        if x >= REQUIRED_SIZE - unu_sz:
-            return x
+    for sz in sorted(rec_sz.values()):
+        if sz >= REQUIRED_SIZE - unu_sz:
+            return sz
 
 def main():
     with open("input/7.data") as f:
