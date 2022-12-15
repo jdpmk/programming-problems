@@ -16,7 +16,7 @@ def manhattan(a, b, c, d):
     return abs(a - c) + abs(b - d)
 
 def solve(reports):
-    reports = list(map(lambda report: transform_report(report), reports))
+    reports = list(map(transform_report, reports))
 
     min_x = math.inf
     min_y = math.inf

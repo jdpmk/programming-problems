@@ -43,7 +43,7 @@ def get_border(report):
     return border
 
 def solve(reports):
-    reports = list(map(lambda report: transform_report(report), reports))
+    reports = list(map(transform_report, reports))
 
     for i, a in enumerate(reports):
         border = get_border(a)
