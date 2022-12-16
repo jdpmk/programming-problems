@@ -32,7 +32,7 @@ def solve(valves):
         return activated & (1 << i)
 
     def set_activated(activated, i):
-        return activated + (1 << i)
+        return activated | (1 << i)
 
     def all_activated(activated):
         return activated == (1 << (n + 1)) - 1
