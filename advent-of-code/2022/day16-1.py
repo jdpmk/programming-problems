@@ -44,6 +44,26 @@ def solve(valves):
                 total_pressure += p[i]
         return total_pressure
 
+    """
+    Recurrence:
+
+    Let max_pressure(u, activated, t) be the maximum pressure
+    released from valve u, given the activated valves (given
+    by the bits set in activated) with t units of time remaining.
+
+    Case 1: When t = 0, no more pressure is released.
+
+    Case 2: If we are at a position with a valve which has a nonzero
+    flow rate (therefore it is worth spending a unit of time to flip
+    the valve), then flip the valve using one unit of time. Remain
+    at the same valve.
+
+    Case 3: Attempt to move to all neighboring valves from the current
+    valve uing one unit of time.
+
+    This can be solved using dynamic programming (implemented via
+    top-down memoization).
+    """
     def max_pressure(u, activated, t, seen):
         if t == 0:
             return 0
