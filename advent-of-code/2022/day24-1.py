@@ -32,11 +32,11 @@ def solve(grid):
             g = advance(g)
 
             k = len(q)
+
             for _ in range(k):
                 t, i, j = q.popleft()
                 if (i, j) == (m - 1, n - 2):
                     return t
-
 
                 for di, dj in [(-1, 0), (1, 0), (0, -1), (0, 1), (0, 0)]:
                     i_ = i + di
