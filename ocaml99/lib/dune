@@ -1,3 +1,3 @@
 (library
- (modules p01 p02 p03)
+ (modules p01 p02 p03 p04)
  (name ocaml99))
