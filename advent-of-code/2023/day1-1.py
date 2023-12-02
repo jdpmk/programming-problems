@@ -1,15 +1,13 @@
 def solve(lines):
-    digit = lambda c: "0" <= c <= "9"
-
     total = 0
 
     for line in lines:
         for c in line:
-            if digit(c):
+            if c.isdigit():
                 total += 10 * int(c)
                 break
         for c in reversed(line):
-            if digit(c):
+            if c.isdigit():
                 total += int(c)
                 break
 

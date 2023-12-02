@@ -1,5 +1,4 @@
 def solve(lines):
-    digit = lambda c: "0" <= c <= "9"
     words = ["one", "two", "three", "four", "five",
              "six", "seven", "eight", "nine"]
 
@@ -8,22 +7,14 @@ def solve(lines):
         nums = []
 
         for i, c in enumerate(s):
-            if digit(c):
-                nums.append((i, int(c)))
+            if c.isdigit():
+                nums.append(int(c))
+            else:
+                for j, word in enumerate(words):
+                    if s[i:i + len(word)] == word:
+                        nums.append(j + 1)
 
-        for i, word in enumerate(words):
-            m = len(word)
-            j = 0
-
-            while j < n:
-                if j + m - 1 < n and s[j:j + m] == word:
-                    nums.append((j, i + 1))
-                    j += m
-                else:
-                    j += 1
-
-        nums.sort()
-        return [value for (_, value) in nums]
+        return nums
 
     total = 0
     for line in lines:
