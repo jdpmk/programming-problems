@@ -1,7 +1,6 @@
 def solve(cards):
     total = 0
-
-    ct = {i: 1 for i in range(len(cards))}
+    ct = [1] * len(cards)
 
     for i, card in enumerate(cards):
         elfs, mine = card.split(" | ")
@@ -16,7 +15,7 @@ def solve(cards):
         for j in range(value):
             ct[i + 1 + j] += ct[i]
 
-    return sum(ct.values())
+    return sum(ct)
 
 def main():
     with open("input/4.data") as f:
