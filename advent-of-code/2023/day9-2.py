@@ -10,8 +10,7 @@ def next_of(seq):
             next_seq.append(v)
             i += 1
         first_of.append(next_seq[0])
-        if all_zeros:
-            break
+        if all_zeros: break
         seq = next_seq
 
     i = len(first_of) - 2
