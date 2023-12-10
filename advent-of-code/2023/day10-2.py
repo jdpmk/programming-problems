@@ -62,7 +62,7 @@ def solve(g):
                 elif last is not None and \
                      (last, g[i][j]) in [("F", "J"), ("L", "7")]:
                     enclosed = not enclosed
-                if g[i][j] not in "-":
+                if g[i][j] != "-":
                     last = g[i][j]
             if enclosed and (i, j) not in vis:
                 total += 1
